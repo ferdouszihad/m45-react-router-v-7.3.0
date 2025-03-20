@@ -8,7 +8,9 @@ const UserRow = ({ user }) => {
       <td>{user.email}</td>
       <td>{user.company.name}</td>
       <td>
-        <button onClick={() => navigate("/user-details")}>View Details</button>
+        <button onClick={() => navigate(`/user-details/${user?.id}`)}>
+          View Details
+        </button>
       </td>
     </tr>
   );

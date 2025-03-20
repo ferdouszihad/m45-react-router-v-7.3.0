@@ -21,7 +21,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/users" element={<Users></Users>}></Route>
           <Route
-            path="/user-details"
+            path="/user-details/:id"
             element={<UserDetail></UserDetail>}
           ></Route>
           <Route path="*" element={<Error404></Error404>}></Route>
