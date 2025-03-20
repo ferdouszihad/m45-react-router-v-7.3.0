@@ -16,7 +16,7 @@ function App() {
         </aside>
         <div
           className="content"
-          style={{ background: "lightgreen", padding: "10px" }}
+          style={{ background: "lightyellow", padding: "10px", flex: 1 }}
         >
           <Outlet></Outlet>
         </div>

@@ -15,15 +15,17 @@ const Navbar = () => {
     <div style={{ backgroundColor: getRandomColor(), padding: "10px" }}>
       <h4>Explore Router</h4>
       <table border={1} width="100%">
-        <tr>
-          {navMenu.map((menu, index) => {
-            return (
-              <td key={index}>
-                <Link to={menu.path}>{menu.name}</Link>
-              </td>
-            );
-          })}
-        </tr>
+        <tbody>
+          <tr>
+            {navMenu.map((menu, index) => {
+              return (
+                <td key={index}>
+                  <Link to={menu.path}>{menu.name}</Link>
+                </td>
+              );
+            })}
+          </tr>
+        </tbody>
       </table>
     </div>
   );
