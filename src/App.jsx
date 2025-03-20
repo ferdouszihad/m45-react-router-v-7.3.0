@@ -1,8 +1,11 @@
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import "./App.css";
 import Navbar from "./shared/Navbar";
+import Loading from "./pages/Loading";
 
 function App() {
+  const navigation = useNavigation();
+
   return (
     <>
       <h2>Welcome to APP Layout</h2>
@@ -18,7 +21,11 @@ function App() {
           className="content"
           style={{ background: "lightyellow", padding: "10px", flex: 1 }}
         >
-          <Outlet></Outlet>
+          {navigation.state == "loading" ? (
+            <Loading></Loading>
+          ) : (
+            <Outlet></Outlet>
+          )}
         </div>
       </div>
 
