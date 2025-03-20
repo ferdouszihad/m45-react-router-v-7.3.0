@@ -1,6 +1,6 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
-const Navbar = () => {
+const Navbar = ({ count }) => {
   const getRandomColor = () => {
     const color =
       "#" + Math.floor(Math.random() * 16777215).toString(16) + "80";
@@ -13,14 +13,14 @@ const Navbar = () => {
   ];
   return (
     <div style={{ backgroundColor: getRandomColor(), padding: "10px" }}>
-      <h4>Explore Router</h4>
+      <h4>Explore Router-{count}</h4>
       <table border={1} width="100%">
         <tbody>
           <tr>
             {navMenu.map((menu, index) => {
               return (
                 <td key={index}>
-                  <Link to={menu.path}>{menu.name}</Link>
+                  <NavLink to={menu.path}>{menu.name}</NavLink>
                 </td>
               );
             })}
