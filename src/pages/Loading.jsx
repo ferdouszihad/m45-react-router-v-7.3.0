@@ -1,4 +1,3 @@
-import ReactLoading from "react-loading";
 const Loading = () => {
   return (
     <div>

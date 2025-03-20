@@ -10,6 +10,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     Component: App,
+    hydrateFallbackElement: <h1>Loading...</h1>,
     children: [
       {
         path: "/",
@@ -27,7 +28,8 @@ const routes = createBrowserRouter([
       {
         path: "/user-details/:id",
         Component: UserDetail,
-        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
       },
       {
         path: "*",
